@@ -1,0 +1,35 @@
+div {
+    height: 100vh;
+}
+
+button{
+    margin-top: 20vh;
+}
+
+input {
+    border-radius: 2px;
+}
+
+.light-theme {
+    background-color: white;
+    color: black;
+    transition: all 0.5s;
+    input {
+        background-color: white;
+        color: black;
+        border: 1px solid black;
+        transition: all 0.5s;
+    }
+}
+  
+.dark-theme {
+    background-color: black;
+    color: white;
+    transition: all 0.5s;
+    input {
+        background-color: black;
+        color: white;
+        border: 1px solid white;
+        transition: all 0.5s;
+    }
+}
