@@ -11,8 +11,9 @@ button {
   all: unset;
   cursor: pointer;
   padding: 10px;
-  transition: transform 0.2s ease-in-out;
-  :active {
-    transform: scale(1.1);
-  }
+  transition: transform 0.1s ease-in-out;
+}
+
+button:active {
+  transform: scale(1.1);
 }

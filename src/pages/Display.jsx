@@ -1,15 +1,18 @@
 import { useTheme } from "../components/ThemeContext";
 import useLocalStorage from "../components/localStorage"
 import Brightness6Icon from '@mui/icons-material/Brightness6';
-import './Homepage.css'
+import './Display.css'
 
-const Homepage = () => {
+const Display = () => {
     const [name, setName] = useLocalStorage('name', 'Visitante');
     const {theme, toggleTheme} = useTheme();
 
     return(
         <div className={theme === 'dark' ? 'dark-theme' : 'light-theme'}>
-            <button onClick={toggleTheme}>{theme === 'dark' ? <Brightness6Icon/> : <Brightness6Icon/>}</button>
+            <button onClick={toggleTheme} title="alternar tema">
+                {theme === 'dark' ? <Brightness6Icon/> : <Brightness6Icon/>}
+            </button>
+            <p>{`tema atual: ${theme === 'dark'? 'dark' : 'light'}`}</p>
             <h1>Bem-vindo, {name}!</h1>
             <input
                 type="text"
@@ -20,4 +23,4 @@ const Homepage = () => {
     )
 }
 
-export default Homepage;
+export default Display;
